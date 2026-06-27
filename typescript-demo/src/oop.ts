@@ -60,3 +60,37 @@ class ModernChai {
 
 const c = new ModernChai()
 c.sugar = 5
+
+
+
+// static
+class EkChai {
+  static shopName = "Chery"
+  constructor(public flavour: string){}
+}
+console.log(EkChai.shopName)
+
+
+abstract class Drink{
+  abstract make(): void
+}
+
+class MyChai extends Drink{
+  make(){
+    console.log("making chai")
+  }
+}
+
+
+//composition
+class Heater{
+  heat(){}
+}
+
+class ChaiMaker{
+  constructor(private heater: Heater){}
+
+  make(){
+    this.heater.heat
+  }
+}
