@@ -1,4 +1,5 @@
 import './App.css'
+import { Card } from './components/Card.tsx'
 import { ChaiCard } from './components/ChaiCard'
 import { ChaiList } from './components/ChaiList.tsx'
 import { Counter } from './components/Counter'
@@ -14,22 +15,31 @@ import { Counter } from './components/Counter'
 function App() {
 
   return (
-    <>
-      <div>
-        <h1>Starting React with Typescript</h1>
-        <ChaiCard name = "Laptop" price = {85000} />
-      <ChaiCard name = "Mobile" price = {30000} />
-      </div>
+   <>
+  <div>
+    <h1>Starting React with Typescript</h1>
 
-      <div>
-        <Counter />
-      </div>
-      <div>
-        <ChaiList items={menu} />
-      </div>
+    <ChaiCard name="Laptop" price={85000} />
+    <ChaiCard name="Mobile" price={30000} />
+  </div>
 
-     </>
-  )
+  <div>
+    <Counter />
+  </div>
+
+  <div>
+    <ChaiList items={menu} />
+  </div>
+
+  <div>
+    <Card
+      title="Learning Typescript"
+      footer={<button>Learn Now</button>}
+    />
+  </div>
+
+</>
+ )
 }
 
 export default App
